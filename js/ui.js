@@ -56,24 +56,41 @@ class Ui {
     for (let i = 0; i < days.length; i++) {
       const weather = days[i];
       listToday.innerHTML += `
-      <li>
-      <div class="weather-misc">
-      <div class="desc">
-      <div>
-      <img src="https://raw.githubusercontent.com/rickellis/SVG-Weather-Icons/master/OpenWeatherMap/${weather.weather[0].id}.svg" alt="" />
-        </div>
-        <div class="description">
-         ${weather.weather[0].description}
-        </div>
-      </div>
-
-      <div>
-        <div class="wind"></div>
-        <div class="air"></div>
-        <div class="weather"></div>
-      </div>
-    </div>
-    </li>
+        <li>
+          <div class="wrapper-today">
+            <div class="left">
+              <div class="icon">
+                <img src="https://raw.githubusercontent.com/rickellis/SVG-Weather-Icons/master/OpenWeatherMap/${weather.weather[0].id}.svg" alt="" />
+              </div>
+              <div class="description">
+                ${weather.weather[0].description}
+              </div>
+            </div>
+            <div class="right">
+              <div class="temp">
+                <div class="big">70°</div>
+                <div class="min-max">
+                  <div class="min">60°</div>
+                  <div class="max">80°</div>
+                </div>
+              </div>
+              <div class="stats">
+                <div class="wind">
+                  <div class="icon"></div>
+                  <div class="value">8<span>mph</span></div>
+                </div>
+                <div class="air">
+                  <div class="icon"></div>
+                  <div class="value">8<span>%</span></div>
+                </div>
+                <div class="weather">
+                  <div class="icon"></div>
+                  <div class="value">8<span>%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
       `;
 
       const listWeekItem = document.createElement("li");

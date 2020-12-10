@@ -3,59 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/e0e4727d8d.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js
+    "></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="stylee.css" />
-    <title>Document</title>
+    <title>Weather App</title>
   </head>
   <body>
     <!-- Navigation -->
-    <div class="container">
-      <div class="navbar">
-        <h2 class="navbar-text"></h2>
-        <form class="form">
-          <div class="search-input">
-            <input
-              type="text"
-              name="name"
-              class="input-txt"
-              placeholder="Search..."
-            />
-            <button class="search-btn">
-              <i class="fas fa-search">Search</i>
-            </button>
-          </div>
-          <!-- <input type="text" />
-          <button class="btn"></button> -->
-        </form>
-      </div>
-
-      <!-- Wrapper for icon, description, temp and low/high -->
-      <div class="wrapper-today">
-        <div class="left">
-          <div class="icon"><i class="fas fa-cloud"></i></div>
+    <div class="navbar">
+      <h2 class="navbar-text"></h2>
+      <form class="form" autocomplete="off">
+        <div class="search-input">
+          <input
+            value="London"
+            type="text"
+            name="name"
+            class="input-txt"
+            placeholder="enter a city..."
+          />
+          <button class="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
         </div>
-
-        <div class="right">
-          <div class="temp">
-            <div class="big">98</div>
-            <div class="min-max">60</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Weather misc. Information, icons, wind, humidity, rain -->
-      <ul class="list-today"></ul>
-
-      <ul class="list-week"></ul>
-
-      <ul class="change-temp">
-        <li><button class="active">°F</button></li>
-        <li><button>°C</button></li>
-      </ul>
+      </form>
     </div>
+    <ul class="list-today"></ul>
+    <ul class="list-week"></ul>
+    <ul class="change-temp">
+      <li><button class="active">°F</button></li>
+      <li><button>°C</button></li>
+    </ul>
 
     <script type="module" src="js/app.js"></script>
   </body>
