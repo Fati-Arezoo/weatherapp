@@ -18,12 +18,17 @@ body {
     rgba(247, 197, 110, 1) 100%
   );
   height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
 
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
 }
 
 .navbar-text {
@@ -64,8 +69,33 @@ body {
 
 .wrapper-today {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  padding-top: 7rem;
+}
+
+.wrapper-today .temp {
+  display: flex;
+}
+
+.wrapper-today .stats {
+  display: flex;
+}
+
+.wrapper-today .left {
+  text-align: center;
+  width: 50%;
+  flex: 1;
+}
+.wrapper-today .left img {
+  height: 110px;
+}
+
+.wrapper-today .left .description {
+  font-size: 150%;
+}
+
+.wrapper-today .right {
+  flex: 1;
 }
 
 .icon {
@@ -74,7 +104,6 @@ body {
 }
 
 .list-week {
-  width: 100%;
   display: flex;
   list-style: none;
   margin-top: 2rem;
@@ -108,5 +137,9 @@ body {
 }
 
 .list-today li.active {
+  display: block;
+}
+
+.list-today {
   display: block;
 }
