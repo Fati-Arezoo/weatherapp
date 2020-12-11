@@ -70,37 +70,66 @@ body {
 .wrapper-today {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-}
-
-.wrapper-today .temp {
-  display: flex;
-}
-
-.wrapper-today .stats {
-  display: flex;
+  width: 600px;
 }
 
 .wrapper-today .left {
-  text-align: center;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex: 1;
 }
 .wrapper-today .left img {
   height: 110px;
+  display: block;
 }
 
 .wrapper-today .left .description {
   font-size: 150%;
+  padding-top: 2rem;
 }
 
 .wrapper-today .right {
   flex: 1;
 }
 
-.icon {
-  width: 6rem;
-  height: 6rem;
+.wrapper-today .right .temp {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.wrapper-today .right .stats {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.wrapper-today .right .stats .icon {
+  font-size: 200%;
+  padding: 20px 0 5px;
+}
+
+.wrapper-today .right .stats .value span {
+  font-size: 80%;
+  padding-left: 2px;
+}
+
+.wrapper-today .right .min-max {
+  padding: 15px 10px;
+  font-size: 80%;
+}
+
+.wrapper-today .right .min {
+  border-bottom: 2px solid #ffffff;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+}
+
+.wrapper-today .right .big {
+  font-size: 4rem;
 }
 
 .list-week {
@@ -112,24 +141,35 @@ body {
 }
 
 .list-week li {
+  cursor: pointer;
   border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 .list-week li.active {
   border: 2px solid #ffffff;
 }
 
+.list-week li:hover {
+  border: 2px solid #eeeeee;
+}
+
 .change-temp {
   display: flex;
+  list-style: none;
 }
 
 .change-temp li button {
   border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 5px;
   outline: none;
   background-color: transparent;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 }
 .change-temp li button.active {
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .list-today li {
@@ -142,4 +182,13 @@ body {
 
 .list-today {
   display: block;
+}
+
+.list-week .day {
+  font-size: 80%;
+  padding-top: 5px;
+}
+
+.list-week .temp .max {
+  padding-left: 3px;
 }

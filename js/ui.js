@@ -60,7 +60,9 @@ class Ui {
           <div class="wrapper-today">
             <div class="left">
               <div class="icon">
-                <img src="https://raw.githubusercontent.com/rickellis/SVG-Weather-Icons/master/OpenWeatherMap/${weather.weather[0].id}.svg" alt="" />
+                <img src="https://raw.githubusercontent.com/rickellis/SVG-Weather-Icons/master/OpenWeatherMap/${
+                  weather.weather[0].id
+                }.svg" alt="" />
               </div>
               <div class="description">
                 ${weather.weather[0].description}
@@ -68,24 +70,26 @@ class Ui {
             </div>
             <div class="right">
               <div class="temp">
-                <div class="big">70°</div>
+                <div class="big">${Ui.kelvinToC(weather.main.temp)}°</div>
                 <div class="min-max">
-                  <div class="min">60°</div>
-                  <div class="max">80°</div>
+                  <div class="min">${Ui.kelvinToC(weather.main.temp_min)}°</div>
+                  <div class="max">${Ui.kelvinToC(weather.main.temp_max)}°</div>
                 </div>
               </div>
               <div class="stats">
                 <div class="wind">
-                  <div class="icon"></div>
-                  <div class="value">8<span>mph</span></div>
+                  <div class="icon"><i class="fas fa-wind"></i></div>
+                  <div class="value">${weather.wind.speed}<span>mph</span></div>
                 </div>
                 <div class="air">
-                  <div class="icon"></div>
-                  <div class="value">8<span>%</span></div>
+                  <div class="icon"><i class="fas fa-tint"></i></div>
+                  <div class="value">${
+                    weather.main.humidity
+                  }<span>%</span></div>
                 </div>
                 <div class="weather">
-                  <div class="icon"></div>
-                  <div class="value">8<span>%</span></div>
+                  <div class="icon"> <i class="fas fa-cloud-rain"></i></div>
+                  <div class="value">${weather.clouds.all}<span>%</span></div>
                 </div>
               </div>
             </div>
